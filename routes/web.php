@@ -13,6 +13,6 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::get('/cv/{user}', PublicCv::class);
+Route::get('/cv/{username}', PublicCv::class);
 
 require __DIR__.'/auth.php';

@@ -9,9 +9,9 @@ class PublicCv extends Component
 {
     public User $user;
 
-    public function mount(User $user): void
+    public function mount(string $username): void
     {
-        $this->user = $user;
+        $this->user = User::where('username', $username)->firstOrFail();
     }
 
     public function render()
