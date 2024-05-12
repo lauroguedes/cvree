@@ -1,4 +1,4 @@
-<div>
+<div class="space-y-5">
     <header class="flex flex-col items-center space-y-4">
         <x-tsavatar lg :model="$user"
                     property="name"
@@ -18,8 +18,11 @@
             <x-tsbadge icon="device-phone-mobile" sm position="left" text="+353 9876432" color="white" light />
         </div>
     </header>
-    <aside>{{ $user->email }}</aside>
-    <main>content</main>
-    <aside>right</aside>
-    <footer>footer</footer>
+    <main class="grid grid-cols-3 gap-3">
+        <aside>
+            <livewire:links />
+        </aside>
+        <article class="col-span-2 bg-gray-400">content</article>
+    </main>
+    <livewire:footerinfo />
 </div>
